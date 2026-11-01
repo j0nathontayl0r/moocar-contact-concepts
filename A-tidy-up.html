@@ -1,0 +1,64 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moocar contact — A: Tidy-up</title><style>
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:"Avenir Next","Avenir","Nunito Sans","Segoe UI",system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.hero{background:#222 url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;background-blend-mode:multiply;color:#fff;text-align:center;padding:56px 20px 40px}
+.hero h1{margin:0;font-size:clamp(34px,6vw,54px);font-weight:700;letter-spacing:-.5px}.hero h1 b{color:var(--o)}
+.hero p{margin:8px auto 0;max-width:34ch;font-size:clamp(17px,2.4vw,22px);opacity:.9}
+.band{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:16px 20px}
+.band .in{max-width:1000px;margin:auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-weight:600;font-size:18px}
+.band .btn{background:var(--ink)}
+.info{max-width:1000px;margin:40px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.info div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.info h3{margin:0 0 6px;color:var(--o);font-size:20px}.info p{margin:0}.info a{font-weight:600}
+.main{max-width:1000px;margin:24px auto 56px;padding:0 20px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card h2{margin:0 0 18px;color:var(--o);font-size:24px}
+.mapc{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+@media (max-width:820px){.info{grid-template-columns:1fr;margin-top:20px}.main{grid-template-columns:1fr}.card{padding:20px}.band .in{justify-content:center;text-align:center}}
+</style></head><body><header class="hdr"><div class="in"><img src="https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png" alt="Moocar — for your next new car">
+<nav><a href="https://www.moocar.com.au/" target="_blank">Home</a><a href="https://www.moocar.com.au/services-3" target="_blank">Services</a><a href="https://www.moocar.com.au/the-process-2" target="_blank">The Process</a><a href="https://www.moocar.com.au/deliveries" target="_blank">Gallery</a><a href="https://www.moocar.com.au/contact-us" target="_blank" aria-current="page">Contact</a></nav>
+<a class="btn hcta" href="tel:1800950222" style="min-height:40px;font-size:14px">Call 1800 950 222</a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">☰</button></div><nav class="mobile-nav" id="mobile-nav" hidden><a href="https://www.moocar.com.au/" target="_blank">Home</a><a href="https://www.moocar.com.au/services-3" target="_blank">Services</a><a href="https://www.moocar.com.au/the-process-2" target="_blank">The Process</a><a href="https://www.moocar.com.au/deliveries" target="_blank">Gallery</a></nav></header><section class="hero"><h1><b>contact</b> us</h1><p>We can quickly source any new car across our paddocks of dealers.</p></section>
+<div class="band"><div class="in"><span>Been quoted on a new car already? Let us beat that price.</span><a class="btn" href="tel:1800950222">Call 1800 950 222</a></div></div>
+<section class="info">
+<div><h3>Call us</h3><p><a href="tel:1800950222">1800 950 222</a><br><a href="mailto:info@moocar.com.au">info@moocar.com.au</a></p></div>
+<div><h3>Visit us</h3><p>526/368 Sussex St<br>Sydney NSW 2000</p></div>
+<div><h3>Opening hours</h3><p>Monday – Friday<br>8am – 6pm</p></div></section>
+<section class="main"><form class="card"><h2>Tell us how we can help</h2><div class="formbody">
+<div class="row2"><div class="field"><label for="a1">First name</label><input id="a1" autocomplete="given-name" required></div>
+<div class="field"><label for="a2">Last name</label><input id="a2" autocomplete="family-name"></div></div>
+<div class="field"><label for="a3">Email</label><input id="a3" type="email" autocomplete="email" required></div>
+<div class="field"><label for="a4">Mobile</label><input id="a4" type="tel" inputmode="tel" autocomplete="tel"></div>
+<div class="field"><label for="a5">Message</label><textarea id="a5" rows="4"></textarea></div>
+<p class="hint">Design prototype — no enquiry is sent.</p><button class="btn" style="width:100%">Send enquiry</button></div>
+<div class="ok"><b>Prototype only.</b> This form is not connected; no enquiry was sent. For now, call or email Moocar directly.</div></form>
+<a class="mapc" href="https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;min-height:250px;background:#f2eee8;text-decoration:none;font-size:20px;font-weight:600">Find Moocar on a map ↗</a></section><footer class="ftr"><div class="in"><span>Moocar concept · 526/368 Sussex St, Sydney NSW 2000</span>
+<span><a href="https://www.moocar.com.au/terms-and-conditions" target="_blank">Terms</a> · <a href="https://www.moocar.com.au/copy-of-terms-and-conditions" target="_blank">Privacy</a></span></div></footer><script>document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();f.classList.add('sent')}));document.querySelector('.burger').onclick=()=>{const b=document.querySelector('.burger'),n=document.getElementById('mobile-nav');n.hidden=!n.hidden;b.setAttribute('aria-expanded',String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString('en-US',{timeZone:'Australia/Sydney'}));const d=n.getDay(),h=n.getHours();return d>0&&d<6&&h>=8&&h<18}
+document.querySelectorAll('[data-open]').forEach(el=>{const o=openNow();el.textContent=o?'Open now · until 6pm':'Closed · opens 8am weekdays';el.classList.toggle('closed',!o)});</script></body></html>

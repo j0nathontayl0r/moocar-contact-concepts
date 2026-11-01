@@ -1,0 +1,746 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Moocar contact design options</title><style>
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tab{font:inherit;font-size:14px;padding:7px 12px;border-radius:999px;border:1px solid var(--border,#ddd);background:transparent;color:var(--foreground,#111);cursor:pointer}
+.tab.on{background:var(--foreground,#111);color:var(--card,#fff)}
+.pane{display:none}.pane.on{display:block}
+.desc{margin:0 0 12px;font-size:14px;color:var(--muted-foreground,#555);max-width:900px}.desc b{color:var(--foreground,#111)}
+.devs{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+figure{margin:0}figcaption{font-size:12px;color:var(--muted-foreground,#777);margin-bottom:6px}
+iframe{border:0;background:#fff;transform-origin:0 0;display:block}
+.ph{width:390px;height:780px;overflow:hidden;border-radius:28px;border:8px solid #1b1b1b;box-sizing:content-box}
+.tb{width:410px;height:540px;overflow:hidden;border-radius:14px;border:6px solid #1b1b1b;box-sizing:content-box}
+.dk{width:628px;height:414px;overflow:hidden;border-radius:8px;border:1px solid var(--border,#ccc)}
+</style></head><body><p style="font-size:13px;color:var(--muted-foreground,#666);margin:0 0 10px">Design prototypes only — forms do not send enquiries. Phone and email links use the live business details.</p><div class="tabs"><button class="tab" data-i="0"><b>A</b> Tidy-up</button><button class="tab on" data-i="1"><b>B</b> Quote-first</button><button class="tab" data-i="2"><b>C</b> Guided</button></div><section class="pane"><p class="desc"><b>A · Tidy-up.</b> Conservative. Same look and layout, just fixed: a real form (no scroll-in-a-box), tap-to-call links, cards that stack, and the map put back.</p>
+<div class="devs"><figure><figcaption>Phone · 390px</figcaption><div class="ph"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — A: Tidy-up&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.hero{background:#222 url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;background-blend-mode:multiply;color:#fff;text-align:center;padding:56px 20px 40px}
+.hero h1{margin:0;font-size:clamp(34px,6vw,54px);font-weight:700;letter-spacing:-.5px}.hero h1 b{color:var(--o)}
+.hero p{margin:8px auto 0;max-width:34ch;font-size:clamp(17px,2.4vw,22px);opacity:.9}
+.band{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:16px 20px}
+.band .in{max-width:1000px;margin:auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-weight:600;font-size:18px}
+.band .btn{background:var(--ink)}
+.info{max-width:1000px;margin:40px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.info div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.info h3{margin:0 0 6px;color:var(--o);font-size:20px}.info p{margin:0}.info a{font-weight:600}
+.main{max-width:1000px;margin:24px auto 56px;padding:0 20px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card h2{margin:0 0 18px;color:var(--o);font-size:24px}
+.mapc{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+@media (max-width:820px){.info{grid-template-columns:1fr;margin-top:20px}.main{grid-template-columns:1fr}.card{padding:20px}.band .in{justify-content:center;text-align:center}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;section class=&quot;hero&quot;&gt;&lt;h1&gt;&lt;b&gt;contact&lt;/b&gt; us&lt;/h1&gt;&lt;p&gt;We can quickly source any new car across our paddocks of dealers.&lt;/p&gt;&lt;/section&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Been quoted on a new car already? Let us beat that price.&lt;/span&gt;&lt;a class=&quot;btn&quot; href=&quot;tel:1800950222&quot;&gt;Call 1800 950 222&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;section class=&quot;info&quot;&gt;
+&lt;div&gt;&lt;h3&gt;Call us&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@moocar.com.au&quot;&gt;info@moocar.com.au&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3&gt;Visit us&lt;/h3&gt;&lt;p&gt;526/368 Sussex St&lt;br&gt;Sydney NSW 2000&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3&gt;Opening hours&lt;/h3&gt;&lt;p&gt;Monday – Friday&lt;br&gt;8am – 6pm&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;main&quot;&gt;&lt;form class=&quot;card&quot;&gt;&lt;h2&gt;Tell us how we can help&lt;/h2&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;row2&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a1&quot;&gt;First name&lt;/label&gt;&lt;input id=&quot;a1&quot; autocomplete=&quot;given-name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a2&quot;&gt;Last name&lt;/label&gt;&lt;input id=&quot;a2&quot; autocomplete=&quot;family-name&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a3&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;a3&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a4&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;a4&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a5&quot;&gt;Message&lt;/label&gt;&lt;textarea id=&quot;a5&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;p class=&quot;hint&quot;&gt;Design prototype — no enquiry is sent.&lt;/p&gt;&lt;button class=&quot;btn&quot; style=&quot;width:100%&quot;&gt;Send enquiry&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt; This form is not connected; no enquiry was sent. For now, call or email Moocar directly.&lt;/div&gt;&lt;/form&gt;
+&lt;a class=&quot;mapc&quot; href=&quot;https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;display:flex;align-items:center;justify-content:center;min-height:250px;background:#f2eee8;text-decoration:none;font-size:20px;font-weight:600&quot;&gt;Find Moocar on a map ↗&lt;/a&gt;&lt;/section&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:390px;height:780px"></iframe></div></figure>
+<figure><figcaption>Tablet · 820px</figcaption><div class="tb"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — A: Tidy-up&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.hero{background:#222 url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;background-blend-mode:multiply;color:#fff;text-align:center;padding:56px 20px 40px}
+.hero h1{margin:0;font-size:clamp(34px,6vw,54px);font-weight:700;letter-spacing:-.5px}.hero h1 b{color:var(--o)}
+.hero p{margin:8px auto 0;max-width:34ch;font-size:clamp(17px,2.4vw,22px);opacity:.9}
+.band{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:16px 20px}
+.band .in{max-width:1000px;margin:auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-weight:600;font-size:18px}
+.band .btn{background:var(--ink)}
+.info{max-width:1000px;margin:40px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.info div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.info h3{margin:0 0 6px;color:var(--o);font-size:20px}.info p{margin:0}.info a{font-weight:600}
+.main{max-width:1000px;margin:24px auto 56px;padding:0 20px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card h2{margin:0 0 18px;color:var(--o);font-size:24px}
+.mapc{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+@media (max-width:820px){.info{grid-template-columns:1fr;margin-top:20px}.main{grid-template-columns:1fr}.card{padding:20px}.band .in{justify-content:center;text-align:center}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;section class=&quot;hero&quot;&gt;&lt;h1&gt;&lt;b&gt;contact&lt;/b&gt; us&lt;/h1&gt;&lt;p&gt;We can quickly source any new car across our paddocks of dealers.&lt;/p&gt;&lt;/section&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Been quoted on a new car already? Let us beat that price.&lt;/span&gt;&lt;a class=&quot;btn&quot; href=&quot;tel:1800950222&quot;&gt;Call 1800 950 222&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;section class=&quot;info&quot;&gt;
+&lt;div&gt;&lt;h3&gt;Call us&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@moocar.com.au&quot;&gt;info@moocar.com.au&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3&gt;Visit us&lt;/h3&gt;&lt;p&gt;526/368 Sussex St&lt;br&gt;Sydney NSW 2000&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3&gt;Opening hours&lt;/h3&gt;&lt;p&gt;Monday – Friday&lt;br&gt;8am – 6pm&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;main&quot;&gt;&lt;form class=&quot;card&quot;&gt;&lt;h2&gt;Tell us how we can help&lt;/h2&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;row2&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a1&quot;&gt;First name&lt;/label&gt;&lt;input id=&quot;a1&quot; autocomplete=&quot;given-name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a2&quot;&gt;Last name&lt;/label&gt;&lt;input id=&quot;a2&quot; autocomplete=&quot;family-name&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a3&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;a3&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a4&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;a4&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a5&quot;&gt;Message&lt;/label&gt;&lt;textarea id=&quot;a5&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;p class=&quot;hint&quot;&gt;Design prototype — no enquiry is sent.&lt;/p&gt;&lt;button class=&quot;btn&quot; style=&quot;width:100%&quot;&gt;Send enquiry&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt; This form is not connected; no enquiry was sent. For now, call or email Moocar directly.&lt;/div&gt;&lt;/form&gt;
+&lt;a class=&quot;mapc&quot; href=&quot;https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;display:flex;align-items:center;justify-content:center;min-height:250px;background:#f2eee8;text-decoration:none;font-size:20px;font-weight:600&quot;&gt;Find Moocar on a map ↗&lt;/a&gt;&lt;/section&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:820px;height:1080px;transform:scale(.5)"></iframe></div></figure>
+<figure><figcaption>Desktop · 1366px</figcaption><div class="dk"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — A: Tidy-up&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.hero{background:#222 url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;background-blend-mode:multiply;color:#fff;text-align:center;padding:56px 20px 40px}
+.hero h1{margin:0;font-size:clamp(34px,6vw,54px);font-weight:700;letter-spacing:-.5px}.hero h1 b{color:var(--o)}
+.hero p{margin:8px auto 0;max-width:34ch;font-size:clamp(17px,2.4vw,22px);opacity:.9}
+.band{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:16px 20px}
+.band .in{max-width:1000px;margin:auto;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-weight:600;font-size:18px}
+.band .btn{background:var(--ink)}
+.info{max-width:1000px;margin:40px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.info div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.info h3{margin:0 0 6px;color:var(--o);font-size:20px}.info p{margin:0}.info a{font-weight:600}
+.main{max-width:1000px;margin:24px auto 56px;padding:0 20px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.card h2{margin:0 0 18px;color:var(--o);font-size:24px}
+.mapc{border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+@media (max-width:820px){.info{grid-template-columns:1fr;margin-top:20px}.main{grid-template-columns:1fr}.card{padding:20px}.band .in{justify-content:center;text-align:center}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;section class=&quot;hero&quot;&gt;&lt;h1&gt;&lt;b&gt;contact&lt;/b&gt; us&lt;/h1&gt;&lt;p&gt;We can quickly source any new car across our paddocks of dealers.&lt;/p&gt;&lt;/section&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Been quoted on a new car already? Let us beat that price.&lt;/span&gt;&lt;a class=&quot;btn&quot; href=&quot;tel:1800950222&quot;&gt;Call 1800 950 222&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;section class=&quot;info&quot;&gt;
+&lt;div&gt;&lt;h3&gt;Call us&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@moocar.com.au&quot;&gt;info@moocar.com.au&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3&gt;Visit us&lt;/h3&gt;&lt;p&gt;526/368 Sussex St&lt;br&gt;Sydney NSW 2000&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;h3&gt;Opening hours&lt;/h3&gt;&lt;p&gt;Monday – Friday&lt;br&gt;8am – 6pm&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;main&quot;&gt;&lt;form class=&quot;card&quot;&gt;&lt;h2&gt;Tell us how we can help&lt;/h2&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;row2&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a1&quot;&gt;First name&lt;/label&gt;&lt;input id=&quot;a1&quot; autocomplete=&quot;given-name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a2&quot;&gt;Last name&lt;/label&gt;&lt;input id=&quot;a2&quot; autocomplete=&quot;family-name&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a3&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;a3&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a4&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;a4&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;a5&quot;&gt;Message&lt;/label&gt;&lt;textarea id=&quot;a5&quot; rows=&quot;4&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+&lt;p class=&quot;hint&quot;&gt;Design prototype — no enquiry is sent.&lt;/p&gt;&lt;button class=&quot;btn&quot; style=&quot;width:100%&quot;&gt;Send enquiry&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt; This form is not connected; no enquiry was sent. For now, call or email Moocar directly.&lt;/div&gt;&lt;/form&gt;
+&lt;a class=&quot;mapc&quot; href=&quot;https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;display:flex;align-items:center;justify-content:center;min-height:250px;background:#f2eee8;text-decoration:none;font-size:20px;font-weight:600&quot;&gt;Find Moocar on a map ↗&lt;/a&gt;&lt;/section&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:1366px;height:900px;transform:scale(.46)"></iframe></div></figure></div></section><section class="pane on"><p class="desc"><b>B · Quote-first.</b> Recommended. Turns Contact into a 'get a price' page: quick call/email buttons at the top on mobile, a short form that asks the useful stuff (which car, existing quote, trade-in), a live 'open now' badge and a sticky call bar.</p>
+<div class="devs"><figure><figcaption>Phone · 390px</figcaption><div class="ph"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — B: Quote-first&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}.address{display:block;border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;text-decoration:none;font-weight:700}.address small{display:block;color:var(--mut);font-size:14px;font-weight:400;margin-top:5px}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.wrap{max-width:1180px;margin:auto;padding:40px 20px 64px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,1fr);gap:40px;align-items:start}
+.kick{color:var(--o-ink);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin:0}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.08;margin:6px 0 10px;letter-spacing:-.6px;text-wrap:balance}
+.lede{color:var(--mut);font-size:18px;margin:0 0 26px;max-width:46ch}
+.quick{display:none;gap:10px;margin:0 0 24px}
+.quick a{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:14px 16px;border-radius:var(--r);background:var(--ink);color:#fff;text-decoration:none;min-height:64px}
+.quick a.alt{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.quick small{opacity:.7;font-size:13px}.quick b{font-size:17px}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+fieldset{border:0;padding:0;margin:0 0 18px}legend{font-weight:600;font-size:14px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}.chip input{position:absolute;opacity:0;inset:0}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff}
+.chip input:checked+span{border-color:var(--o);background:#fff3ea;color:var(--o-ink);font-weight:600}
+.quoted{display:none}form:has(#q-yes:checked) .quoted{display:block}
+aside{position:sticky;top:88px;display:grid;gap:16px}
+.panel{background:var(--ink);color:#fff;border-radius:14px;padding:24px;overflow:hidden;position:relative}
+.panel h2{margin:0 0 4px;font-size:22px}.panel .big{font-size:28px;font-weight:700;color:var(--o);text-decoration:none;display:block;margin:6px 0 2px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:#9be59b}.status::before{content:&quot;&quot;;width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.closed{color:#bbb}
+.panel dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:18px 0 0;font-size:15px}.panel dt{color:#999}.panel dd{margin:0}
+.mapc{border-radius:14px;overflow:hidden;border:1px solid var(--line);height:220px}
+.promise{font-size:14px;color:var(--mut);display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+.sticky{display:none}
+@media (max-width:900px){
+ .wrap{grid-template-columns:1fr;gap:24px;padding:24px 16px 96px}
+ .quick{display:flex} aside{position:static} form{padding:20px}
+ .panel .big{display:none}
+ .sticky{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,17,17,.96);z-index:30}
+ .sticky .btn{flex:1}
+}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;main class=&quot;wrap&quot;&gt;&lt;section&gt;
+&lt;p class=&quot;kick&quot;&gt;Get a price&lt;/p&gt;&lt;h1&gt;Tell us the car. We&#x27;ll find the best deal.&lt;/h1&gt;
+&lt;p class=&quot;lede&quot;&gt;Fleet pricing on any brand, sourced from dealers nationally. Already have a quote? We&#x27;ll try to beat it.&lt;/p&gt;
+&lt;div class=&quot;quick&quot;&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;&lt;small&gt;Call · Mon–Fri 8–6&lt;/small&gt;&lt;b&gt;1800 950 222&lt;/b&gt;&lt;/a&gt;
+&lt;a class=&quot;alt&quot; href=&quot;mailto:info@moocar.com.au&quot;&gt;&lt;small&gt;Email&lt;/small&gt;&lt;b&gt;Email us&lt;/b&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;form&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b1&quot;&gt;What car are you after?&lt;/label&gt;&lt;input id=&quot;b1&quot; placeholder=&quot;e.g. Toyota RAV4 Hybrid GXL, or &#x27;not sure yet&#x27;&quot;&gt;&lt;div class=&quot;hint&quot;&gt;Not sure? That&#x27;s fine — we&#x27;ll help you choose.&lt;/div&gt;&lt;/div&gt;
+&lt;fieldset&gt;&lt;legend&gt;Already been quoted?&lt;/legend&gt;&lt;div class=&quot;chips&quot;&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;q&quot; id=&quot;q-yes&quot;&gt;&lt;span&gt;Yes — beat my price&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;q&quot; checked&gt;&lt;span&gt;No, not yet&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;field quoted&quot;&gt;&lt;label for=&quot;b2&quot;&gt;Quoted drive-away price&lt;/label&gt;&lt;input id=&quot;b2&quot; inputmode=&quot;numeric&quot; placeholder=&quot;$&quot;&gt;&lt;/div&gt;
+&lt;fieldset&gt;&lt;legend&gt;Anything else?&lt;/legend&gt;&lt;div class=&quot;chips&quot;&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Trade-in&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Finance&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Business / fleet&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Corporate event&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;row2&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b3&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;b3&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b4&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;b4&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b5&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;b5&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;
+&lt;p class=&quot;hint&quot;&gt;Design prototype — no enquiry is sent.&lt;/p&gt;&lt;button class=&quot;btn&quot; style=&quot;width:100%&quot;&gt;Get my price&lt;/button&gt;
+&lt;div class=&quot;promise&quot;&gt;&lt;span&gt;✓ Contact details go to Moocar in a live version&lt;/span&gt;&lt;span&gt;✓ Prototype — no enquiry is sent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt;&lt;br&gt;No request was sent. Call or email Moocar directly.&lt;/div&gt;&lt;/form&gt;&lt;/section&gt;
+&lt;aside&gt;&lt;div class=&quot;panel&quot;&gt;&lt;span class=&quot;status&quot; data-open&gt;Open now&lt;/span&gt;&lt;h2 style=&quot;margin-top:10px&quot;&gt;Prefer to talk?&lt;/h2&gt;
+&lt;a class=&quot;big&quot; href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;a href=&quot;mailto:info@moocar.com.au&quot; style=&quot;color:#ddd&quot;&gt;info@moocar.com.au&lt;/a&gt;
+&lt;dl&gt;&lt;dt&gt;Hours&lt;/dt&gt;&lt;dd&gt;Mon–Fri, 8am–6pm&lt;/dd&gt;&lt;dt&gt;Office&lt;/dt&gt;&lt;dd&gt;526/368 Sussex St, Sydney NSW 2000&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;
+&lt;a class=&quot;address&quot; href=&quot;https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Find the office on a map ↗&lt;small&gt;526/368 Sussex St, Sydney NSW 2000&lt;/small&gt;&lt;/a&gt;&lt;/aside&gt;&lt;/main&gt;
+&lt;div class=&quot;sticky&quot;&gt;&lt;a class=&quot;btn&quot; href=&quot;tel:1800950222&quot;&gt;Call&lt;/a&gt;&lt;a class=&quot;btn ghost&quot; style=&quot;color:#fff&quot; href=&quot;#b1&quot;&gt;Get a price&lt;/a&gt;&lt;/div&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:390px;height:780px"></iframe></div></figure>
+<figure><figcaption>Tablet · 820px</figcaption><div class="tb"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — B: Quote-first&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}.address{display:block;border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;text-decoration:none;font-weight:700}.address small{display:block;color:var(--mut);font-size:14px;font-weight:400;margin-top:5px}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.wrap{max-width:1180px;margin:auto;padding:40px 20px 64px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,1fr);gap:40px;align-items:start}
+.kick{color:var(--o-ink);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin:0}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.08;margin:6px 0 10px;letter-spacing:-.6px;text-wrap:balance}
+.lede{color:var(--mut);font-size:18px;margin:0 0 26px;max-width:46ch}
+.quick{display:none;gap:10px;margin:0 0 24px}
+.quick a{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:14px 16px;border-radius:var(--r);background:var(--ink);color:#fff;text-decoration:none;min-height:64px}
+.quick a.alt{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.quick small{opacity:.7;font-size:13px}.quick b{font-size:17px}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+fieldset{border:0;padding:0;margin:0 0 18px}legend{font-weight:600;font-size:14px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}.chip input{position:absolute;opacity:0;inset:0}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff}
+.chip input:checked+span{border-color:var(--o);background:#fff3ea;color:var(--o-ink);font-weight:600}
+.quoted{display:none}form:has(#q-yes:checked) .quoted{display:block}
+aside{position:sticky;top:88px;display:grid;gap:16px}
+.panel{background:var(--ink);color:#fff;border-radius:14px;padding:24px;overflow:hidden;position:relative}
+.panel h2{margin:0 0 4px;font-size:22px}.panel .big{font-size:28px;font-weight:700;color:var(--o);text-decoration:none;display:block;margin:6px 0 2px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:#9be59b}.status::before{content:&quot;&quot;;width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.closed{color:#bbb}
+.panel dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:18px 0 0;font-size:15px}.panel dt{color:#999}.panel dd{margin:0}
+.mapc{border-radius:14px;overflow:hidden;border:1px solid var(--line);height:220px}
+.promise{font-size:14px;color:var(--mut);display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+.sticky{display:none}
+@media (max-width:900px){
+ .wrap{grid-template-columns:1fr;gap:24px;padding:24px 16px 96px}
+ .quick{display:flex} aside{position:static} form{padding:20px}
+ .panel .big{display:none}
+ .sticky{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,17,17,.96);z-index:30}
+ .sticky .btn{flex:1}
+}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;main class=&quot;wrap&quot;&gt;&lt;section&gt;
+&lt;p class=&quot;kick&quot;&gt;Get a price&lt;/p&gt;&lt;h1&gt;Tell us the car. We&#x27;ll find the best deal.&lt;/h1&gt;
+&lt;p class=&quot;lede&quot;&gt;Fleet pricing on any brand, sourced from dealers nationally. Already have a quote? We&#x27;ll try to beat it.&lt;/p&gt;
+&lt;div class=&quot;quick&quot;&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;&lt;small&gt;Call · Mon–Fri 8–6&lt;/small&gt;&lt;b&gt;1800 950 222&lt;/b&gt;&lt;/a&gt;
+&lt;a class=&quot;alt&quot; href=&quot;mailto:info@moocar.com.au&quot;&gt;&lt;small&gt;Email&lt;/small&gt;&lt;b&gt;Email us&lt;/b&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;form&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b1&quot;&gt;What car are you after?&lt;/label&gt;&lt;input id=&quot;b1&quot; placeholder=&quot;e.g. Toyota RAV4 Hybrid GXL, or &#x27;not sure yet&#x27;&quot;&gt;&lt;div class=&quot;hint&quot;&gt;Not sure? That&#x27;s fine — we&#x27;ll help you choose.&lt;/div&gt;&lt;/div&gt;
+&lt;fieldset&gt;&lt;legend&gt;Already been quoted?&lt;/legend&gt;&lt;div class=&quot;chips&quot;&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;q&quot; id=&quot;q-yes&quot;&gt;&lt;span&gt;Yes — beat my price&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;q&quot; checked&gt;&lt;span&gt;No, not yet&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;field quoted&quot;&gt;&lt;label for=&quot;b2&quot;&gt;Quoted drive-away price&lt;/label&gt;&lt;input id=&quot;b2&quot; inputmode=&quot;numeric&quot; placeholder=&quot;$&quot;&gt;&lt;/div&gt;
+&lt;fieldset&gt;&lt;legend&gt;Anything else?&lt;/legend&gt;&lt;div class=&quot;chips&quot;&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Trade-in&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Finance&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Business / fleet&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Corporate event&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;row2&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b3&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;b3&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b4&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;b4&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b5&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;b5&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;
+&lt;p class=&quot;hint&quot;&gt;Design prototype — no enquiry is sent.&lt;/p&gt;&lt;button class=&quot;btn&quot; style=&quot;width:100%&quot;&gt;Get my price&lt;/button&gt;
+&lt;div class=&quot;promise&quot;&gt;&lt;span&gt;✓ Contact details go to Moocar in a live version&lt;/span&gt;&lt;span&gt;✓ Prototype — no enquiry is sent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt;&lt;br&gt;No request was sent. Call or email Moocar directly.&lt;/div&gt;&lt;/form&gt;&lt;/section&gt;
+&lt;aside&gt;&lt;div class=&quot;panel&quot;&gt;&lt;span class=&quot;status&quot; data-open&gt;Open now&lt;/span&gt;&lt;h2 style=&quot;margin-top:10px&quot;&gt;Prefer to talk?&lt;/h2&gt;
+&lt;a class=&quot;big&quot; href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;a href=&quot;mailto:info@moocar.com.au&quot; style=&quot;color:#ddd&quot;&gt;info@moocar.com.au&lt;/a&gt;
+&lt;dl&gt;&lt;dt&gt;Hours&lt;/dt&gt;&lt;dd&gt;Mon–Fri, 8am–6pm&lt;/dd&gt;&lt;dt&gt;Office&lt;/dt&gt;&lt;dd&gt;526/368 Sussex St, Sydney NSW 2000&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;
+&lt;a class=&quot;address&quot; href=&quot;https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Find the office on a map ↗&lt;small&gt;526/368 Sussex St, Sydney NSW 2000&lt;/small&gt;&lt;/a&gt;&lt;/aside&gt;&lt;/main&gt;
+&lt;div class=&quot;sticky&quot;&gt;&lt;a class=&quot;btn&quot; href=&quot;tel:1800950222&quot;&gt;Call&lt;/a&gt;&lt;a class=&quot;btn ghost&quot; style=&quot;color:#fff&quot; href=&quot;#b1&quot;&gt;Get a price&lt;/a&gt;&lt;/div&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:820px;height:1080px;transform:scale(.5)"></iframe></div></figure>
+<figure><figcaption>Desktop · 1366px</figcaption><div class="dk"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — B: Quote-first&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}.address{display:block;border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;text-decoration:none;font-weight:700}.address small{display:block;color:var(--mut);font-size:14px;font-weight:400;margin-top:5px}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+.wrap{max-width:1180px;margin:auto;padding:40px 20px 64px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,1fr);gap:40px;align-items:start}
+.kick{color:var(--o-ink);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin:0}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.08;margin:6px 0 10px;letter-spacing:-.6px;text-wrap:balance}
+.lede{color:var(--mut);font-size:18px;margin:0 0 26px;max-width:46ch}
+.quick{display:none;gap:10px;margin:0 0 24px}
+.quick a{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:14px 16px;border-radius:var(--r);background:var(--ink);color:#fff;text-decoration:none;min-height:64px}
+.quick a.alt{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.quick small{opacity:.7;font-size:13px}.quick b{font-size:17px}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+fieldset{border:0;padding:0;margin:0 0 18px}legend{font-weight:600;font-size:14px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}.chip input{position:absolute;opacity:0;inset:0}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);font-size:15px;cursor:pointer;background:#fff}
+.chip input:checked+span{border-color:var(--o);background:#fff3ea;color:var(--o-ink);font-weight:600}
+.quoted{display:none}form:has(#q-yes:checked) .quoted{display:block}
+aside{position:sticky;top:88px;display:grid;gap:16px}
+.panel{background:var(--ink);color:#fff;border-radius:14px;padding:24px;overflow:hidden;position:relative}
+.panel h2{margin:0 0 4px;font-size:22px}.panel .big{font-size:28px;font-weight:700;color:var(--o);text-decoration:none;display:block;margin:6px 0 2px}
+.status{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:#9be59b}.status::before{content:&quot;&quot;;width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.closed{color:#bbb}
+.panel dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:18px 0 0;font-size:15px}.panel dt{color:#999}.panel dd{margin:0}
+.mapc{border-radius:14px;overflow:hidden;border:1px solid var(--line);height:220px}
+.promise{font-size:14px;color:var(--mut);display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+.sticky{display:none}
+@media (max-width:900px){
+ .wrap{grid-template-columns:1fr;gap:24px;padding:24px 16px 96px}
+ .quick{display:flex} aside{position:static} form{padding:20px}
+ .panel .big{display:none}
+ .sticky{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,17,17,.96);z-index:30}
+ .sticky .btn{flex:1}
+}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;main class=&quot;wrap&quot;&gt;&lt;section&gt;
+&lt;p class=&quot;kick&quot;&gt;Get a price&lt;/p&gt;&lt;h1&gt;Tell us the car. We&#x27;ll find the best deal.&lt;/h1&gt;
+&lt;p class=&quot;lede&quot;&gt;Fleet pricing on any brand, sourced from dealers nationally. Already have a quote? We&#x27;ll try to beat it.&lt;/p&gt;
+&lt;div class=&quot;quick&quot;&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;&lt;small&gt;Call · Mon–Fri 8–6&lt;/small&gt;&lt;b&gt;1800 950 222&lt;/b&gt;&lt;/a&gt;
+&lt;a class=&quot;alt&quot; href=&quot;mailto:info@moocar.com.au&quot;&gt;&lt;small&gt;Email&lt;/small&gt;&lt;b&gt;Email us&lt;/b&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;form&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b1&quot;&gt;What car are you after?&lt;/label&gt;&lt;input id=&quot;b1&quot; placeholder=&quot;e.g. Toyota RAV4 Hybrid GXL, or &#x27;not sure yet&#x27;&quot;&gt;&lt;div class=&quot;hint&quot;&gt;Not sure? That&#x27;s fine — we&#x27;ll help you choose.&lt;/div&gt;&lt;/div&gt;
+&lt;fieldset&gt;&lt;legend&gt;Already been quoted?&lt;/legend&gt;&lt;div class=&quot;chips&quot;&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;q&quot; id=&quot;q-yes&quot;&gt;&lt;span&gt;Yes — beat my price&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;q&quot; checked&gt;&lt;span&gt;No, not yet&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;field quoted&quot;&gt;&lt;label for=&quot;b2&quot;&gt;Quoted drive-away price&lt;/label&gt;&lt;input id=&quot;b2&quot; inputmode=&quot;numeric&quot; placeholder=&quot;$&quot;&gt;&lt;/div&gt;
+&lt;fieldset&gt;&lt;legend&gt;Anything else?&lt;/legend&gt;&lt;div class=&quot;chips&quot;&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Trade-in&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Finance&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Business / fleet&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;chip&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Corporate event&lt;/span&gt;&lt;/label&gt;&lt;/div&gt;&lt;/fieldset&gt;
+&lt;div class=&quot;row2&quot;&gt;&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b3&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;b3&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b4&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;b4&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;b5&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;b5&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;
+&lt;p class=&quot;hint&quot;&gt;Design prototype — no enquiry is sent.&lt;/p&gt;&lt;button class=&quot;btn&quot; style=&quot;width:100%&quot;&gt;Get my price&lt;/button&gt;
+&lt;div class=&quot;promise&quot;&gt;&lt;span&gt;✓ Contact details go to Moocar in a live version&lt;/span&gt;&lt;span&gt;✓ Prototype — no enquiry is sent&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt;&lt;br&gt;No request was sent. Call or email Moocar directly.&lt;/div&gt;&lt;/form&gt;&lt;/section&gt;
+&lt;aside&gt;&lt;div class=&quot;panel&quot;&gt;&lt;span class=&quot;status&quot; data-open&gt;Open now&lt;/span&gt;&lt;h2 style=&quot;margin-top:10px&quot;&gt;Prefer to talk?&lt;/h2&gt;
+&lt;a class=&quot;big&quot; href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;a href=&quot;mailto:info@moocar.com.au&quot; style=&quot;color:#ddd&quot;&gt;info@moocar.com.au&lt;/a&gt;
+&lt;dl&gt;&lt;dt&gt;Hours&lt;/dt&gt;&lt;dd&gt;Mon–Fri, 8am–6pm&lt;/dd&gt;&lt;dt&gt;Office&lt;/dt&gt;&lt;dd&gt;526/368 Sussex St, Sydney NSW 2000&lt;/dd&gt;&lt;/dl&gt;&lt;/div&gt;
+&lt;a class=&quot;address&quot; href=&quot;https://maps.google.com/?q=368+Sussex+St+Sydney+NSW+2000&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Find the office on a map ↗&lt;small&gt;526/368 Sussex St, Sydney NSW 2000&lt;/small&gt;&lt;/a&gt;&lt;/aside&gt;&lt;/main&gt;
+&lt;div class=&quot;sticky&quot;&gt;&lt;a class=&quot;btn&quot; href=&quot;tel:1800950222&quot;&gt;Call&lt;/a&gt;&lt;a class=&quot;btn ghost&quot; style=&quot;color:#fff&quot; href=&quot;#b1&quot;&gt;Get a price&lt;/a&gt;&lt;/div&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:1366px;height:900px;transform:scale(.46)"></iframe></div></figure></div></section><section class="pane"><p class="desc"><b>C · Guided.</b> More adventurous. One question per screen, big tap targets, Next button pinned to the bottom on phones. Feels like an app; on desktop it splits in two with the brand panel.</p>
+<div class="devs"><figure><figcaption>Phone · 390px</figcaption><div class="ph"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — C: Guided&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+body{background:#fff}
+.split{display:grid;grid-template-columns:minmax(320px,0.9fr) 1.1fr;min-height:calc(100vh - 64px)}
+.side{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.side h1{font-size:clamp(34px,4vw,52px);line-height:1.02;margin:0;letter-spacing:-1px;max-width:11ch}
+.side p{font-size:18px;max-width:30ch}
+.side img{width:min(340px,70%);align-self:flex-end;filter:drop-shadow(0 20px 30px rgba(0,0,0,.35))}
+.side .contact{font-size:15px}.side .contact a{font-weight:700}
+.flow{padding:56px clamp(20px,6vw,88px);display:flex;flex-direction:column;max-width:720px}
+.prog{display:flex;gap:6px;margin-bottom:32px}.prog i{flex:1;height:4px;border-radius:4px;background:var(--line)}.prog i.on{background:var(--o)}
+.step{display:none}.step.on{display:block;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.step.on{animation:none}}
+.q{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 8px;letter-spacing:-.4px}
+.sub{color:var(--mut);margin:0 0 24px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;font:600 17px var(--f);padding:18px 20px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:60px}
+.opt:hover,.opt.sel{border-color:var(--o);background:#fff7f1}.opt small{font-weight:400;color:var(--mut)}
+.nav{display:flex;gap:12px;margin-top:28px;align-items:center}.back{background:none;border:0;font:600 15px var(--f);color:var(--mut);cursor:pointer;min-height:44px}
+.mobtop{display:none}
+@media (max-width:860px){
+ .split{grid-template-columns:1fr;min-height:0} .side{display:none}
+ .mobtop{display:flex;justify-content:space-between;align-items:center;background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:14px 16px;font-weight:600}
+ .mobtop a{background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-size:14px}
+ .flow{padding:24px 16px 120px}
+ .nav{position:fixed;left:0;right:0;bottom:0;margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);z-index:30}
+ .nav .btn{flex:1}
+}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;div class=&quot;mobtop&quot;&gt;&lt;span&gt;Talk to a car expert&lt;/span&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;/div&gt;
+&lt;main class=&quot;split&quot;&gt;&lt;section class=&quot;side&quot;&gt;&lt;div&gt;&lt;h1&gt;Let&#x27;s get you mooving.&lt;/h1&gt;&lt;p&gt;Four quick questions to show how a fleet-pricing enquiry could work.&lt;/p&gt;&lt;/div&gt;
+&lt;img src=&quot;https://static.wixstatic.com/media/2959db_129cf05701a74b03917d277309f3d84a~mv2.png/v1/fill/w_460,h_536,al_c,q_90/Cars_07.png&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;contact&quot;&gt;Rather talk? &lt;a href=&quot;tel:1800950222&quot; style=&quot;color:#fff&quot;&gt;1800 950 222&lt;/a&gt; · Mon–Fri 8–6&lt;br&gt;526/368 Sussex St, Sydney&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;flow&quot;&gt;&lt;div class=&quot;prog&quot;&gt;&lt;i class=&quot;on&quot;&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;form id=&quot;f&quot;&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;step on&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Do you know which car you want?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;No wrong answers — we help plenty of people decide.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Yes, I know the model &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;I&#x27;ve narrowed it down &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Not yet — help me choose &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot; style=&quot;margin-top:18px&quot;&gt;&lt;label for=&quot;c1&quot;&gt;Make / model (optional)&lt;/label&gt;&lt;input id=&quot;c1&quot; placeholder=&quot;e.g. Kia EV9 GT-Line&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Have you already been quoted?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Send it over and we&#x27;ll try to beat it.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Yes — beat my price &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;No, not yet &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Anything else we should sort?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Pick any.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Trade in my current car&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Finance&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Buying for a business&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Home / work delivery&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Where should we send your price?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;This is a design prototype — no enquiry is sent.&lt;/p&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c2&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;c2&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c3&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;c3&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c4&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;c4&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt; No request was sent. Call or email Moocar directly.&lt;/div&gt;
+&lt;div class=&quot;nav&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;back&quot; id=&quot;bk&quot;&gt;Back&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;nx&quot;&gt;Next&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/section&gt;&lt;/main&gt;
+&lt;script&gt;
+let i=0;const S=[...document.querySelectorAll(&#x27;.step&#x27;)],P=[...document.querySelectorAll(&#x27;.prog i&#x27;)],nx=document.getElementById(&#x27;nx&#x27;),bk=document.getElementById(&#x27;bk&#x27;),f=document.getElementById(&#x27;f&#x27;);
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=&gt;s.classList.toggle(&#x27;on&#x27;,k===i));P.forEach((p,k)=&gt;p.classList.toggle(&#x27;on&#x27;,k&lt;=i));nx.textContent=i===S.length-1?&#x27;Get my price&#x27;:&#x27;Next&#x27;;bk.style.visibility=i?&#x27;visible&#x27;:&#x27;hidden&#x27;}
+document.querySelectorAll(&#x27;.opt&#x27;).forEach(o=&gt;o.addEventListener(&#x27;click&#x27;,()=&gt;{if(o.dataset.multi){o.classList.toggle(&#x27;sel&#x27;);return}o.parentNode.querySelectorAll(&#x27;.opt&#x27;).forEach(x=&gt;x.classList.remove(&#x27;sel&#x27;));o.classList.add(&#x27;sel&#x27;);setTimeout(()=&gt;go(i+1),180)}));
+nx.onclick=()=&gt;{if(i===S.length-1){if(f.reportValidity()){f.classList.add(&#x27;sent&#x27;);document.querySelector(&#x27;.nav&#x27;).style.display=&#x27;none&#x27;}}else go(i+1)};bk.onclick=()=&gt;go(i-1);go(0);
+&lt;/script&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:390px;height:780px"></iframe></div></figure>
+<figure><figcaption>Tablet · 820px</figcaption><div class="tb"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — C: Guided&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+body{background:#fff}
+.split{display:grid;grid-template-columns:minmax(320px,0.9fr) 1.1fr;min-height:calc(100vh - 64px)}
+.side{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.side h1{font-size:clamp(34px,4vw,52px);line-height:1.02;margin:0;letter-spacing:-1px;max-width:11ch}
+.side p{font-size:18px;max-width:30ch}
+.side img{width:min(340px,70%);align-self:flex-end;filter:drop-shadow(0 20px 30px rgba(0,0,0,.35))}
+.side .contact{font-size:15px}.side .contact a{font-weight:700}
+.flow{padding:56px clamp(20px,6vw,88px);display:flex;flex-direction:column;max-width:720px}
+.prog{display:flex;gap:6px;margin-bottom:32px}.prog i{flex:1;height:4px;border-radius:4px;background:var(--line)}.prog i.on{background:var(--o)}
+.step{display:none}.step.on{display:block;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.step.on{animation:none}}
+.q{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 8px;letter-spacing:-.4px}
+.sub{color:var(--mut);margin:0 0 24px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;font:600 17px var(--f);padding:18px 20px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:60px}
+.opt:hover,.opt.sel{border-color:var(--o);background:#fff7f1}.opt small{font-weight:400;color:var(--mut)}
+.nav{display:flex;gap:12px;margin-top:28px;align-items:center}.back{background:none;border:0;font:600 15px var(--f);color:var(--mut);cursor:pointer;min-height:44px}
+.mobtop{display:none}
+@media (max-width:860px){
+ .split{grid-template-columns:1fr;min-height:0} .side{display:none}
+ .mobtop{display:flex;justify-content:space-between;align-items:center;background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:14px 16px;font-weight:600}
+ .mobtop a{background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-size:14px}
+ .flow{padding:24px 16px 120px}
+ .nav{position:fixed;left:0;right:0;bottom:0;margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);z-index:30}
+ .nav .btn{flex:1}
+}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;div class=&quot;mobtop&quot;&gt;&lt;span&gt;Talk to a car expert&lt;/span&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;/div&gt;
+&lt;main class=&quot;split&quot;&gt;&lt;section class=&quot;side&quot;&gt;&lt;div&gt;&lt;h1&gt;Let&#x27;s get you mooving.&lt;/h1&gt;&lt;p&gt;Four quick questions to show how a fleet-pricing enquiry could work.&lt;/p&gt;&lt;/div&gt;
+&lt;img src=&quot;https://static.wixstatic.com/media/2959db_129cf05701a74b03917d277309f3d84a~mv2.png/v1/fill/w_460,h_536,al_c,q_90/Cars_07.png&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;contact&quot;&gt;Rather talk? &lt;a href=&quot;tel:1800950222&quot; style=&quot;color:#fff&quot;&gt;1800 950 222&lt;/a&gt; · Mon–Fri 8–6&lt;br&gt;526/368 Sussex St, Sydney&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;flow&quot;&gt;&lt;div class=&quot;prog&quot;&gt;&lt;i class=&quot;on&quot;&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;form id=&quot;f&quot;&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;step on&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Do you know which car you want?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;No wrong answers — we help plenty of people decide.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Yes, I know the model &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;I&#x27;ve narrowed it down &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Not yet — help me choose &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot; style=&quot;margin-top:18px&quot;&gt;&lt;label for=&quot;c1&quot;&gt;Make / model (optional)&lt;/label&gt;&lt;input id=&quot;c1&quot; placeholder=&quot;e.g. Kia EV9 GT-Line&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Have you already been quoted?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Send it over and we&#x27;ll try to beat it.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Yes — beat my price &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;No, not yet &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Anything else we should sort?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Pick any.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Trade in my current car&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Finance&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Buying for a business&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Home / work delivery&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Where should we send your price?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;This is a design prototype — no enquiry is sent.&lt;/p&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c2&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;c2&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c3&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;c3&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c4&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;c4&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt; No request was sent. Call or email Moocar directly.&lt;/div&gt;
+&lt;div class=&quot;nav&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;back&quot; id=&quot;bk&quot;&gt;Back&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;nx&quot;&gt;Next&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/section&gt;&lt;/main&gt;
+&lt;script&gt;
+let i=0;const S=[...document.querySelectorAll(&#x27;.step&#x27;)],P=[...document.querySelectorAll(&#x27;.prog i&#x27;)],nx=document.getElementById(&#x27;nx&#x27;),bk=document.getElementById(&#x27;bk&#x27;),f=document.getElementById(&#x27;f&#x27;);
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=&gt;s.classList.toggle(&#x27;on&#x27;,k===i));P.forEach((p,k)=&gt;p.classList.toggle(&#x27;on&#x27;,k&lt;=i));nx.textContent=i===S.length-1?&#x27;Get my price&#x27;:&#x27;Next&#x27;;bk.style.visibility=i?&#x27;visible&#x27;:&#x27;hidden&#x27;}
+document.querySelectorAll(&#x27;.opt&#x27;).forEach(o=&gt;o.addEventListener(&#x27;click&#x27;,()=&gt;{if(o.dataset.multi){o.classList.toggle(&#x27;sel&#x27;);return}o.parentNode.querySelectorAll(&#x27;.opt&#x27;).forEach(x=&gt;x.classList.remove(&#x27;sel&#x27;));o.classList.add(&#x27;sel&#x27;);setTimeout(()=&gt;go(i+1),180)}));
+nx.onclick=()=&gt;{if(i===S.length-1){if(f.reportValidity()){f.classList.add(&#x27;sent&#x27;);document.querySelector(&#x27;.nav&#x27;).style.display=&#x27;none&#x27;}}else go(i+1)};bk.onclick=()=&gt;go(i-1);go(0);
+&lt;/script&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:820px;height:1080px;transform:scale(.5)"></iframe></div></figure>
+<figure><figcaption>Desktop · 1366px</figcaption><div class="dk"><iframe srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;en-AU&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Moocar contact — C: Guided&lt;/title&gt;&lt;style&gt;
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:&quot;Avenir Next&quot;,&quot;Avenir&quot;,&quot;Nunito Sans&quot;,&quot;Segoe UI&quot;,system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+body{background:#fff}
+.split{display:grid;grid-template-columns:minmax(320px,0.9fr) 1.1fr;min-height:calc(100vh - 64px)}
+.side{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.side h1{font-size:clamp(34px,4vw,52px);line-height:1.02;margin:0;letter-spacing:-1px;max-width:11ch}
+.side p{font-size:18px;max-width:30ch}
+.side img{width:min(340px,70%);align-self:flex-end;filter:drop-shadow(0 20px 30px rgba(0,0,0,.35))}
+.side .contact{font-size:15px}.side .contact a{font-weight:700}
+.flow{padding:56px clamp(20px,6vw,88px);display:flex;flex-direction:column;max-width:720px}
+.prog{display:flex;gap:6px;margin-bottom:32px}.prog i{flex:1;height:4px;border-radius:4px;background:var(--line)}.prog i.on{background:var(--o)}
+.step{display:none}.step.on{display:block;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.step.on{animation:none}}
+.q{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 8px;letter-spacing:-.4px}
+.sub{color:var(--mut);margin:0 0 24px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;font:600 17px var(--f);padding:18px 20px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:60px}
+.opt:hover,.opt.sel{border-color:var(--o);background:#fff7f1}.opt small{font-weight:400;color:var(--mut)}
+.nav{display:flex;gap:12px;margin-top:28px;align-items:center}.back{background:none;border:0;font:600 15px var(--f);color:var(--mut);cursor:pointer;min-height:44px}
+.mobtop{display:none}
+@media (max-width:860px){
+ .split{grid-template-columns:1fr;min-height:0} .side{display:none}
+ .mobtop{display:flex;justify-content:space-between;align-items:center;background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:14px 16px;font-weight:600}
+ .mobtop a{background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-size:14px}
+ .flow{padding:24px 16px 120px}
+ .nav{position:fixed;left:0;right:0;bottom:0;margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);z-index:30}
+ .nav .btn{flex:1}
+}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header class=&quot;hdr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;img src=&quot;https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png&quot; alt=&quot;Moocar — for your next new car&quot;&gt;
+&lt;nav&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/contact-us&quot; target=&quot;_blank&quot; aria-current=&quot;page&quot;&gt;Contact&lt;/a&gt;&lt;/nav&gt;
+&lt;a class=&quot;btn hcta&quot; href=&quot;tel:1800950222&quot; style=&quot;min-height:40px;font-size:14px&quot;&gt;Call 1800 950 222&lt;/a&gt;
+&lt;button class=&quot;burger&quot; aria-label=&quot;Menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-nav&quot;&gt;☰&lt;/button&gt;&lt;/div&gt;&lt;nav class=&quot;mobile-nav&quot; id=&quot;mobile-nav&quot; hidden&gt;&lt;a href=&quot;https://www.moocar.com.au/&quot; target=&quot;_blank&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/services-3&quot; target=&quot;_blank&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/the-process-2&quot; target=&quot;_blank&quot;&gt;The Process&lt;/a&gt;&lt;a href=&quot;https://www.moocar.com.au/deliveries&quot; target=&quot;_blank&quot;&gt;Gallery&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;div class=&quot;mobtop&quot;&gt;&lt;span&gt;Talk to a car expert&lt;/span&gt;&lt;a href=&quot;tel:1800950222&quot;&gt;1800 950 222&lt;/a&gt;&lt;/div&gt;
+&lt;main class=&quot;split&quot;&gt;&lt;section class=&quot;side&quot;&gt;&lt;div&gt;&lt;h1&gt;Let&#x27;s get you mooving.&lt;/h1&gt;&lt;p&gt;Four quick questions to show how a fleet-pricing enquiry could work.&lt;/p&gt;&lt;/div&gt;
+&lt;img src=&quot;https://static.wixstatic.com/media/2959db_129cf05701a74b03917d277309f3d84a~mv2.png/v1/fill/w_460,h_536,al_c,q_90/Cars_07.png&quot; alt=&quot;&quot;&gt;
+&lt;div class=&quot;contact&quot;&gt;Rather talk? &lt;a href=&quot;tel:1800950222&quot; style=&quot;color:#fff&quot;&gt;1800 950 222&lt;/a&gt; · Mon–Fri 8–6&lt;br&gt;526/368 Sussex St, Sydney&lt;/div&gt;&lt;/section&gt;
+&lt;section class=&quot;flow&quot;&gt;&lt;div class=&quot;prog&quot;&gt;&lt;i class=&quot;on&quot;&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;form id=&quot;f&quot;&gt;&lt;div class=&quot;formbody&quot;&gt;
+&lt;div class=&quot;step on&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Do you know which car you want?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;No wrong answers — we help plenty of people decide.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Yes, I know the model &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;I&#x27;ve narrowed it down &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Not yet — help me choose &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot; style=&quot;margin-top:18px&quot;&gt;&lt;label for=&quot;c1&quot;&gt;Make / model (optional)&lt;/label&gt;&lt;input id=&quot;c1&quot; placeholder=&quot;e.g. Kia EV9 GT-Line&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Have you already been quoted?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Send it over and we&#x27;ll try to beat it.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;Yes — beat my price &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot;&gt;No, not yet &lt;small&gt;→&lt;/small&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Anything else we should sort?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;Pick any.&lt;/p&gt;
+&lt;div class=&quot;opts&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Trade in my current car&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Finance&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Buying for a business&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;opt&quot; data-multi&gt;Home / work delivery&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;step&quot;&gt;&lt;h2 class=&quot;q&quot;&gt;Where should we send your price?&lt;/h2&gt;&lt;p class=&quot;sub&quot;&gt;This is a design prototype — no enquiry is sent.&lt;/p&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c2&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;c2&quot; autocomplete=&quot;name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c3&quot;&gt;Mobile&lt;/label&gt;&lt;input id=&quot;c3&quot; type=&quot;tel&quot; inputmode=&quot;tel&quot; autocomplete=&quot;tel&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label for=&quot;c4&quot;&gt;Email&lt;/label&gt;&lt;input id=&quot;c4&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ok&quot;&gt;&lt;b&gt;Prototype only.&lt;/b&gt; No request was sent. Call or email Moocar directly.&lt;/div&gt;
+&lt;div class=&quot;nav&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;back&quot; id=&quot;bk&quot;&gt;Back&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;nx&quot;&gt;Next&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/section&gt;&lt;/main&gt;
+&lt;script&gt;
+let i=0;const S=[...document.querySelectorAll(&#x27;.step&#x27;)],P=[...document.querySelectorAll(&#x27;.prog i&#x27;)],nx=document.getElementById(&#x27;nx&#x27;),bk=document.getElementById(&#x27;bk&#x27;),f=document.getElementById(&#x27;f&#x27;);
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=&gt;s.classList.toggle(&#x27;on&#x27;,k===i));P.forEach((p,k)=&gt;p.classList.toggle(&#x27;on&#x27;,k&lt;=i));nx.textContent=i===S.length-1?&#x27;Get my price&#x27;:&#x27;Next&#x27;;bk.style.visibility=i?&#x27;visible&#x27;:&#x27;hidden&#x27;}
+document.querySelectorAll(&#x27;.opt&#x27;).forEach(o=&gt;o.addEventListener(&#x27;click&#x27;,()=&gt;{if(o.dataset.multi){o.classList.toggle(&#x27;sel&#x27;);return}o.parentNode.querySelectorAll(&#x27;.opt&#x27;).forEach(x=&gt;x.classList.remove(&#x27;sel&#x27;));o.classList.add(&#x27;sel&#x27;);setTimeout(()=&gt;go(i+1),180)}));
+nx.onclick=()=&gt;{if(i===S.length-1){if(f.reportValidity()){f.classList.add(&#x27;sent&#x27;);document.querySelector(&#x27;.nav&#x27;).style.display=&#x27;none&#x27;}}else go(i+1)};bk.onclick=()=&gt;go(i-1);go(0);
+&lt;/script&gt;&lt;footer class=&quot;ftr&quot;&gt;&lt;div class=&quot;in&quot;&gt;&lt;span&gt;Moocar concept · 526/368 Sussex St, Sydney NSW 2000&lt;/span&gt;
+&lt;span&gt;&lt;a href=&quot;https://www.moocar.com.au/terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Terms&lt;/a&gt; · &lt;a href=&quot;https://www.moocar.com.au/copy-of-terms-and-conditions&quot; target=&quot;_blank&quot;&gt;Privacy&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/footer&gt;&lt;script&gt;document.querySelectorAll(&#x27;form&#x27;).forEach(f=&gt;f.addEventListener(&#x27;submit&#x27;,e=&gt;{e.preventDefault();f.classList.add(&#x27;sent&#x27;)}));document.querySelector(&#x27;.burger&#x27;).onclick=()=&gt;{const b=document.querySelector(&#x27;.burger&#x27;),n=document.getElementById(&#x27;mobile-nav&#x27;);n.hidden=!n.hidden;b.setAttribute(&#x27;aria-expanded&#x27;,String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString(&#x27;en-US&#x27;,{timeZone:&#x27;Australia/Sydney&#x27;}));const d=n.getDay(),h=n.getHours();return d&gt;0&amp;&amp;d&lt;6&amp;&amp;h&gt;=8&amp;&amp;h&lt;18}
+document.querySelectorAll(&#x27;[data-open]&#x27;).forEach(el=&gt;{const o=openNow();el.textContent=o?&#x27;Open now · until 6pm&#x27;:&#x27;Closed · opens 8am weekdays&#x27;;el.classList.toggle(&#x27;closed&#x27;,!o)});&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" style="width:1366px;height:900px;transform:scale(.46)"></iframe></div></figure></div></section>
+<script>document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab,.pane').forEach(e=>e.classList.remove('on'));t.classList.add('on');document.querySelectorAll('.pane')[t.dataset.i].classList.add('on')})</script></body></html>

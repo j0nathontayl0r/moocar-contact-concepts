@@ -1,0 +1,87 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moocar contact — C: Guided</title><style>
+:root{--o:#ff6600;--o-ink:#c94f00;--ink:#111;--ink2:#2a2a2a;--mut:#6b6b6b;--line:#e4e1dc;--bg:#faf8f5;--card:#fff;
+--f:"Avenir Next","Avenir","Nunito Sans","Segoe UI",system-ui,sans-serif;--r:10px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+.mobile-nav{display:none}.mobile-nav[hidden]{display:none}@media(max-width:820px){.mobile-nav:not([hidden]){display:flex;gap:4px;flex-direction:column;padding:0 20px 14px}.mobile-nav a{color:#fff;padding:10px;text-decoration:none;min-height:44px}}body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}img{max-width:100%;display:block}
+.hdr{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.hdr .in{max-width:1180px;margin:auto;display:flex;align-items:center;gap:24px;padding:12px 20px}
+.hdr img{height:40px;width:auto}
+.hdr nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+.hdr nav a{text-decoration:none;opacity:.85}.hdr nav a[aria-current]{opacity:1;color:var(--o)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;
+ border:0;font:600 16px var(--f);text-decoration:none;cursor:pointer;background:var(--o);color:#fff}
+.btn:hover{background:#ff7a26}.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.chip:focus-within{outline:3px solid #ffb27a;outline-offset:2px}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;width:44px;height:44px;font-size:26px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;font:16px var(--f);padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--o);outline:none}
+.field{margin-bottom:16px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13px;color:var(--mut)}
+.ftr{background:var(--ink);color:#bbb;font-size:14px;padding:32px 20px}
+.ftr .in{max-width:1180px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+.ftr a{color:#ddd}
+.ok{display:none;padding:18px;border-radius:var(--r);background:#fff3ea;border:1.5px solid #ffc9a3}
+form.sent .ok{display:block}form.sent .formbody{display:none}
+@media (max-width:820px){.hdr nav,.hdr .hcta{display:none}.burger{display:block}.row2{grid-template-columns:1fr}}
+
+body{background:#fff}
+.split{display:grid;grid-template-columns:minmax(320px,0.9fr) 1.1fr;min-height:calc(100vh - 64px)}
+.side{background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.side h1{font-size:clamp(34px,4vw,52px);line-height:1.02;margin:0;letter-spacing:-1px;max-width:11ch}
+.side p{font-size:18px;max-width:30ch}
+.side img{width:min(340px,70%);align-self:flex-end;filter:drop-shadow(0 20px 30px rgba(0,0,0,.35))}
+.side .contact{font-size:15px}.side .contact a{font-weight:700}
+.flow{padding:56px clamp(20px,6vw,88px);display:flex;flex-direction:column;max-width:720px}
+.prog{display:flex;gap:6px;margin-bottom:32px}.prog i{flex:1;height:4px;border-radius:4px;background:var(--line)}.prog i.on{background:var(--o)}
+.step{display:none}.step.on{display:block;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.step.on{animation:none}}
+.q{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0 0 8px;letter-spacing:-.4px}
+.sub{color:var(--mut);margin:0 0 24px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;font:600 17px var(--f);padding:18px 20px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:60px}
+.opt:hover,.opt.sel{border-color:var(--o);background:#fff7f1}.opt small{font-weight:400;color:var(--mut)}
+.nav{display:flex;gap:12px;margin-top:28px;align-items:center}.back{background:none;border:0;font:600 15px var(--f);color:var(--mut);cursor:pointer;min-height:44px}
+.mobtop{display:none}
+@media (max-width:860px){
+ .split{grid-template-columns:1fr;min-height:0} .side{display:none}
+ .mobtop{display:flex;justify-content:space-between;align-items:center;background:var(--o) url(https://static.wixstatic.com/media/2959db_c7f6f10ce60f4956b9ca338d79b4b9c3~mv2.jpg/v1/fill/w_1600,h_132,al_c,q_80/mooorange-pattern.jpg) center/cover;color:#fff;padding:14px 16px;font-weight:600}
+ .mobtop a{background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;padding:10px 16px;font-size:14px}
+ .flow{padding:24px 16px 120px}
+ .nav{position:fixed;left:0;right:0;bottom:0;margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);z-index:30}
+ .nav .btn{flex:1}
+}
+</style></head><body><header class="hdr"><div class="in"><img src="https://static.wixstatic.com/media/2959db_f8e3ee585300405cabf8e42fb6664eda~mv2.png/v1/fill/w_390,h_124,al_c,q_90/moocar-logo-white-and-orange.png" alt="Moocar — for your next new car">
+<nav><a href="https://www.moocar.com.au/" target="_blank">Home</a><a href="https://www.moocar.com.au/services-3" target="_blank">Services</a><a href="https://www.moocar.com.au/the-process-2" target="_blank">The Process</a><a href="https://www.moocar.com.au/deliveries" target="_blank">Gallery</a><a href="https://www.moocar.com.au/contact-us" target="_blank" aria-current="page">Contact</a></nav>
+<a class="btn hcta" href="tel:1800950222" style="min-height:40px;font-size:14px">Call 1800 950 222</a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">☰</button></div><nav class="mobile-nav" id="mobile-nav" hidden><a href="https://www.moocar.com.au/" target="_blank">Home</a><a href="https://www.moocar.com.au/services-3" target="_blank">Services</a><a href="https://www.moocar.com.au/the-process-2" target="_blank">The Process</a><a href="https://www.moocar.com.au/deliveries" target="_blank">Gallery</a></nav></header><div class="mobtop"><span>Talk to a car expert</span><a href="tel:1800950222">1800 950 222</a></div>
+<main class="split"><section class="side"><div><h1>Let's get you mooving.</h1><p>Four quick questions to show how a fleet-pricing enquiry could work.</p></div>
+<img src="https://static.wixstatic.com/media/2959db_129cf05701a74b03917d277309f3d84a~mv2.png/v1/fill/w_460,h_536,al_c,q_90/Cars_07.png" alt="">
+<div class="contact">Rather talk? <a href="tel:1800950222" style="color:#fff">1800 950 222</a> · Mon–Fri 8–6<br>526/368 Sussex St, Sydney</div></section>
+<section class="flow"><div class="prog"><i class="on"></i><i></i><i></i><i></i></div>
+<form id="f"><div class="formbody">
+<div class="step on"><h2 class="q">Do you know which car you want?</h2><p class="sub">No wrong answers — we help plenty of people decide.</p>
+<div class="opts"><button type="button" class="opt">Yes, I know the model <small>→</small></button><button type="button" class="opt">I've narrowed it down <small>→</small></button><button type="button" class="opt">Not yet — help me choose <small>→</small></button></div>
+<div class="field" style="margin-top:18px"><label for="c1">Make / model (optional)</label><input id="c1" placeholder="e.g. Kia EV9 GT-Line"></div></div>
+<div class="step"><h2 class="q">Have you already been quoted?</h2><p class="sub">Send it over and we'll try to beat it.</p>
+<div class="opts"><button type="button" class="opt">Yes — beat my price <small>→</small></button><button type="button" class="opt">No, not yet <small>→</small></button></div></div>
+<div class="step"><h2 class="q">Anything else we should sort?</h2><p class="sub">Pick any.</p>
+<div class="opts"><button type="button" class="opt" data-multi>Trade in my current car</button><button type="button" class="opt" data-multi>Finance</button><button type="button" class="opt" data-multi>Buying for a business</button><button type="button" class="opt" data-multi>Home / work delivery</button></div></div>
+<div class="step"><h2 class="q">Where should we send your price?</h2><p class="sub">This is a design prototype — no enquiry is sent.</p>
+<div class="field"><label for="c2">Name</label><input id="c2" autocomplete="name" required></div>
+<div class="field"><label for="c3">Mobile</label><input id="c3" type="tel" inputmode="tel" autocomplete="tel" required></div>
+<div class="field"><label for="c4">Email</label><input id="c4" type="email" autocomplete="email"></div></div></div>
+<div class="ok"><b>Prototype only.</b> No request was sent. Call or email Moocar directly.</div>
+<div class="nav"><button type="button" class="back" id="bk">Back</button><button type="button" class="btn" id="nx">Next</button></div></form></section></main>
+<script>
+let i=0;const S=[...document.querySelectorAll('.step')],P=[...document.querySelectorAll('.prog i')],nx=document.getElementById('nx'),bk=document.getElementById('bk'),f=document.getElementById('f');
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('on',k===i));P.forEach((p,k)=>p.classList.toggle('on',k<=i));nx.textContent=i===S.length-1?'Get my price':'Next';bk.style.visibility=i?'visible':'hidden'}
+document.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{if(o.dataset.multi){o.classList.toggle('sel');return}o.parentNode.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));o.classList.add('sel');setTimeout(()=>go(i+1),180)}));
+nx.onclick=()=>{if(i===S.length-1){if(f.reportValidity()){f.classList.add('sent');document.querySelector('.nav').style.display='none'}}else go(i+1)};bk.onclick=()=>go(i-1);go(0);
+</script><footer class="ftr"><div class="in"><span>Moocar concept · 526/368 Sussex St, Sydney NSW 2000</span>
+<span><a href="https://www.moocar.com.au/terms-and-conditions" target="_blank">Terms</a> · <a href="https://www.moocar.com.au/copy-of-terms-and-conditions" target="_blank">Privacy</a></span></div></footer><script>document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();f.classList.add('sent')}));document.querySelector('.burger').onclick=()=>{const b=document.querySelector('.burger'),n=document.getElementById('mobile-nav');n.hidden=!n.hidden;b.setAttribute('aria-expanded',String(!n.hidden))};
+function openNow(){const n=new Date(new Date().toLocaleString('en-US',{timeZone:'Australia/Sydney'}));const d=n.getDay(),h=n.getHours();return d>0&&d<6&&h>=8&&h<18}
+document.querySelectorAll('[data-open]').forEach(el=>{const o=openNow();el.textContent=o?'Open now · until 6pm':'Closed · opens 8am weekdays';el.classList.toggle('closed',!o)});</script></body></html>

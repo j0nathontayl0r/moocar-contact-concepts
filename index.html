@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#151515">
+  <title>Moocar · Contact page concepts</title>
+  <style>
+    :root { --ink:#151515; --paper:#f7f5f1; --line:#ddd9d1; --orange:#ff6600; --muted:#62615e; --font:"Avenir Next",Avenir,"Segoe UI",sans-serif; }
+    * { box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); line-height:1.5 }
+    a { color:inherit }
+    a:focus-visible { outline:3px solid var(--orange); outline-offset:4px }
+    .wrap { width:min(1180px,calc(100% - 40px)); margin:auto }
+    header { background:var(--ink); color:white }
+    header .wrap { display:flex; justify-content:space-between; align-items:center; padding:17px 0; gap:24px }
+    .wordmark { display:flex; align-items:center; gap:11px; text-decoration:none; font-size:19px; letter-spacing:-.04em; font-weight:800 }
+    .mark { color:var(--orange); font-size:28px; line-height:1 }
+    header span.note { color:#b6b6b6; font-size:13px }
+    .hero { padding:74px 0 58px; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(280px,.6fr); gap:48px; align-items:end; border-bottom:1px solid var(--line) }
+    .eyebrow { margin:0 0 13px; color:#bf4b00; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:.13em }
+    h1 { margin:0; font-size:clamp(36px,5.3vw,70px); letter-spacing:-.065em; line-height:1.02; text-wrap:balance }
+    h1 em { font-style:normal; color:var(--orange) }
+    .intro { color:#464440; margin:0 0 5px; font-size:18px; max-width:34ch }
+    .notice { margin:26px 0 0; padding:13px 17px; background:#fff1e6; border:1px solid #ffd1ae; border-radius:7px; font-size:14px; color:#4a3528 }
+    .sectionhead { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:55px 0 20px }
+    .sectionhead h2 { font-size:25px; letter-spacing:-.03em; margin:0 }
+    .sectionhead p { color:var(--muted); margin:0; font-size:14px }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-bottom:42px }
+    .card { background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; transition:transform .18s,box-shadow .18s }
+    .card:hover { transform:translateY(-3px); box-shadow:0 14px 30px #15151516 }
+    .shot { background:#e8e4df; height:290px; overflow:hidden; border-bottom:1px solid var(--line); position:relative }
+    .shot img { display:block; width:100%; height:auto; object-fit:cover; object-position:top; }
+    .shot::after { content:"PHONE PREVIEW"; position:absolute; bottom:10px; right:10px; background:#151515; color:#fff; font:700 10px var(--font); letter-spacing:.11em; padding:6px 9px; border-radius:3px }
+    .body { padding:24px; flex:1; display:flex; flex-direction:column }
+    .tag { color:#bc4c04; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.09em; margin:0 0 6px }
+    .card h3 { font-size:25px; letter-spacing:-.035em; margin:0 0 10px; line-height:1.15 }
+    .card p.desc { font-size:15px; color:var(--muted); margin:0 0 24px }
+    .actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:auto }
+    .button { background:var(--ink); color:#fff; text-decoration:none; padding:11px 18px; min-height:46px; border-radius:100px; font-weight:700; display:inline-flex; align-items:center; justify-content:center; font-size:14px }
+    .button:hover { background:#353535 }
+    .button.orange { background:var(--orange); color:#fff }
+    .button.orange:hover { background:#df5900 }
+    .compare { background:#242424; color:#fff; border-radius:12px; padding:30px; margin:0 0 70px; display:flex; align-items:center; justify-content:space-between; gap:25px }
+    .compare h2 { font-size:22px; margin:0 0 6px; letter-spacing:-.025em }
+    .compare p { margin:0; color:#c5c5c5; font-size:15px }
+    footer { border-top:1px solid var(--line); padding:26px 0 40px; font-size:13px; color:var(--muted) }
+    footer .wrap { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap }
+    @media(max-width:900px) { .hero { grid-template-columns:1fr; gap:15px; padding:54px 0 40px } .intro { max-width:65ch } .grid { grid-template-columns:repeat(2,minmax(0,1fr)) } }
+    @media(max-width:620px) { .wrap { width:min(100% - 32px,1180px) } header span.note { display:none } .hero { padding:43px 0 30px } h1 { font-size:clamp(37px,10vw,52px) } .intro { font-size:16px } .sectionhead { margin:38px 0 16px; align-items:start; flex-direction:column; gap:2px } .grid { grid-template-columns:1fr; gap:16px; margin-bottom:25px } .card { display:grid; grid-template-columns:36% 64%; min-height:235px } .shot { height:100%; border-bottom:0; border-right:1px solid var(--line) } .shot img { width:100%; height:100%; object-fit:cover; object-position:top center } .shot::after { display:none } .body { padding:19px } .card h3 { font-size:21px } .card p.desc { font-size:13px; margin-bottom:15px } .tag { font-size:11px } .compare { align-items:start; flex-direction:column; margin-bottom:40px; padding:23px } }
+    @media(max-width:380px) { .card { grid-template-columns:30% 70% } .body { padding:15px } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="wordmark" href="index.html"><span class="mark" aria-hidden="true">◆</span> moocar / design study</a><span class="note">Contact page · responsive concepts</span></div></header>
+  <main class="wrap">
+    <div class="hero"><div><p class="eyebrow">Three directions · one better mobile experience</p><h1>A better way to get <em>mooving.</em></h1></div><p class="intro">Three alternatives for Moocar’s contact page. Open each concept on your own phone, tablet or computer to see how it adapts.</p></div>
+    <p class="notice"><strong>Design review only.</strong> These are not Moocar’s live website. The forms are interactive demonstrations and do not send enquiries; call and email links use Moocar’s public contact details.</p>
+    <div class="sectionhead"><h2>Choose a direction</h2><p>Start with B for the strongest fit.</p></div>
+    <div class="grid">
+      <article class="card"><div class="shot"><img src="option-a.jpg" alt="Phone view of A, a streamlined version of Moocar’s current contact page" width="390" height="844"></div><div class="body"><p class="tag">A · Conservative</p><h3>Tidy-up</h3><p class="desc">Same look and familiar layout, with a usable full-width form, stacked contact details, and no nested scrolling.</p><div class="actions"><a class="button" href="A-tidy-up.html">Open concept A ↗</a></div></div></article>
+      <article class="card"><div class="shot"><img src="option-b.jpg" alt="Phone view of B, a quote-first contact page" width="390" height="844"></div><div class="body"><p class="tag">B · Recommended</p><h3>Quote-first</h3><p class="desc">Lead with a price enquiry: car, existing quote, trade-in and finance. Call and email stay easy to reach on mobile.</p><div class="actions"><a class="button orange" href="B-quote-first.html">Open concept B ↗</a></div></div></article>
+      <article class="card"><div class="shot"><img src="option-c.jpg" alt="Phone view of C, a guided step-by-step enquiry" width="390" height="844"></div><div class="body"><p class="tag">C · Exploratory</p><h3>Guided</h3><p class="desc">One question at a time with large tap targets. More app-like, less like a conventional contact page.</p><div class="actions"><a class="button" href="C-guided.html">Open concept C ↗</a></div></div></article>
+    </div>
+    <section class="compare"><div><h2>Want to compare across devices?</h2><p>See phone, tablet and desktop mockups together. Best viewed on a larger screen.</p></div><a class="button orange" href="Moocar%20Contact%20Options.html">Open comparison board ↗</a></section>
+  </main>
+  <footer><div class="wrap"><span>Independent design study for review · not the live Moocar website</span><span><a href="https://www.moocar.com.au/">Visit the current Moocar site ↗</a></span></div></footer>
+</body>
+</html>
